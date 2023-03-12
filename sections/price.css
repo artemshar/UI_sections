@@ -1,0 +1,153 @@
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+section {
+  font-family: sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1.6rem;
+}
+
+.subtitle {
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  color: gray;
+  margin-bottom: 2rem;
+}
+
+.switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+  color: gray;
+  margin-bottom: 80px;
+}
+
+.switcher input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.switcher label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 60px;
+  height: 30px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.switcher label:after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 45%;
+  height: 90%;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.1s;
+}
+
+.switcher input:checked + label {
+  background: #19bc9d;
+}
+
+.switcher input:checked + label:after {
+  left: calc(100% - 5%);
+  transform: translateX(-100%);
+}
+.switcher label:active:after {
+  width: 50%;
+}
+
+/*стили для карточек*/
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 25px 15px;
+}
+
+.card:hover {
+  background-color: #33495e;
+  color: white;
+  transition: 0.2s;
+}
+
+.card:hover .card_title,
+.card:hover .features_list li {
+  color: white;
+  transition: 0.2s;
+}
+
+.card:hover .btn_buyplan {
+  background-color: #19bc9d;
+  color: white;
+  transition: 0.2s;
+}
+
+.top_card {
+  text-align: center;
+  justify-content: center;
+  border-bottom: 1px solid grey;
+}
+
+.card_title {
+  color: grey;
+  font-size: 1.2rem;
+}
+
+.cost {
+  font-weight: bold;
+  font-size: 40px;
+  margin: 15px 0;
+}
+
+.bottom_card {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.features_list li {
+  margin-bottom: 7px;
+  color: grey;
+}
+
+.features_list li::marker {
+  color: #19bc9d;
+}
+
+.btn_buyplan {
+  background-color: #ebeff0;
+  color: #33495e;
+  font-weight: bold;
+  border: none;
+  padding: 15px;
+  border-radius: 7px;
+  cursor: pointer;
+}
